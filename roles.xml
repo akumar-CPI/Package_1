@@ -1,10 +1,9 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <cpilint>
 	<rules>
-	
-	<disallowed-sender-adpater>
+	<disallowed-sender-adapters>
 		<disallow>ftp</disallow>
-	</disallowed-sender-adpater>
+	</disallowed-sender-adapters>
 	
 	<matching-process-direct-channels-required/>
 
@@ -14,11 +13,11 @@
 	<naming>
 		<scheme>
 			<not>
-				<regx>Content Modifier \d+</regx>
+				<regex>Content Modifier \d+</regex>
 			</not>
 		</scheme>
 		<message>Do not use the default Content Modifier step name</message>
-		<applt-to>content-modifier.name</applt-to>
+		<apply-to>content-modifier.name</apply-to>
 		
 	</naming>
 	
@@ -26,7 +25,8 @@
 		<allow>message-mapping</allow>
 	</allowed-mapping-type>
 	
-	<unencrypted-data-write-not-allowed/>
+	<unencrypted-data-store-write-not-allowed/>
 	
     </rules>
+
 </cpilint>
