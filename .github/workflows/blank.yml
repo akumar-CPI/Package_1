@@ -30,4 +30,4 @@ jobs:
 
       - name: Run CPILint on changed files
         run: |
-          cpilint -rules rules.json -files test.zip
+          cpilint -files test.zip
