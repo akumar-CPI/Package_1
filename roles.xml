@@ -1,32 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cpilint>
-	<rules>
-	<disallowed-sender-adapters>
-		<disallow>ftp</disallow>
-	</disallowed-sender-adapters>
-	
-	<matching-process-direct-channels-required/>
+  <rules>
 
-    
+    <!-- Disallowed Sender Adapters -->
+    <disallowed-sender-adapters>
+      <disallow>ftp</disallow>
+    </disallowed-sender-adapters>
+
+    <!-- Matching Process Direct Channels Required -->
+    <matching-process-direct-channels-required/>
+
+    <!-- IFlow Description Required -->
     <iflow-description-required/>
-	
-	<naming>
-		<scheme>
-			<not>
-				<regex>Content Modifier \d+</regex>
-			</not>
-		</scheme>
-		<message>Do not use the default Content Modifier step name</message>
-		<apply-to>content-modifier.name</apply-to>
-		
-	</naming>
-	
-	<allowed-mapping-type>
-		<allow>message-mapping</allow>
-	</allowed-mapping-type>
-	
-	<unencrypted-data-store-write-not-allowed/>
-	
-    </rules>
 
+    <!-- Naming Convention -->
+    <naming>
+      <scheme>
+        <not>
+          <regex>Content Modifier \d+</regex>
+        </not>
+      </scheme>
+      <message>Do not use the default Content Modifier step name</message>
+      <apply-to>content-modifier.name</apply-to>
+    </naming>
+
+    <!-- Allowed Mapping Type -->
+    <allowed-mapping-type>
+      <allow>message-mapping</allow>
+    </allowed-mapping-type>
+
+    <!-- Unencrypted Data Store Write Not Allowed -->
+    <unencrypted-data-store-write-not-allowed/>
+
+  </rules>
 </cpilint>
