@@ -1,0 +1,36 @@
+name: CPILint Governance Check
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '**'  # Trigger on any file change
+
+jobs:
+  cpilint-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'  # Adjust based on CPILint requirements
+      - name: Download CPILint
+        run: |
+          git clone https://github.com/mwittrock/cpilint.git
+          cd cpilint
+          ./scripts/build.sh  # Or use Ant if needed: ant -buildfile build.xml
+
+      - name: Run CPILint on changed files
+        run: |
+          CHANGED_FILES=$(git diff-tree --no-commit-id --name-only -r ${{ github.sha }})
+          for file in $CHANGED_FILES; do
+            if [[ "$file" == *.iflw ]]; then  # Assuming CPI integration flows use .iflw extension
+              java -jar cpilint/dist-files/cpilint.jar "$file"
+            fi
+          done
