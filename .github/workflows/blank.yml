@@ -20,6 +20,9 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '17'  # Adjust based on CPILint requirements
+      - name: Install Ant
+        run: sudo apt-get install -y
+
       - name: Download CPILint
         run: |
           git clone https://github.com/mwittrock/cpilint.git
