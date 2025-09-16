@@ -20,20 +20,20 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '17'  # Adjust based on CPILint requirements
-      - name: Install Ant
-        run: sudo apt-get install -y
 
-      - name: Download CPILint
+      - name: Download CPILint relase
         run: |
-          git clone https://github.com/mwittrock/cpilint.git
-          cd cpilint
-          ./scripts/build.sh  # Or use Ant if needed: ant -buildfile build.xml
+          curl -L https://github.com/mwittrock/cpilint/releases/latest/download/cpilint.zip
+          -o cpilint.zip
+          unzip cpilint.zip -d cpilint
+          chmod u+x cpilint/bin/cpilint
+          echo "$GITHUB_WORKSPACE/cpilint/bin" >> $GITHUB_PATH
 
       - name: Run CPILint on changed files
         run: |
           CHANGED_FILES=$(git diff-tree --no-commit-id --name-only -r ${{ github.sha }})
           for file in $CHANGED_FILES; do
-            if [[ "$file" == *.iflw ]]; then  # Assuming CPI integration flows use .iflw extension
+            if [[ "$file" == *.zip ]]; then  # Assuming CPI integration flows use .iflw extension
               java -jar cpilint/dist-files/cpilint.jar "$file"
             fi
           done
