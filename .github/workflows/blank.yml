@@ -23,8 +23,7 @@ jobs:
 
       - name: Download CPILint relase
         run: |
-          curl -L https://github.com/mwittrock/cpilint/releases/latest/download/cpilint.zip
-          -o cpilint.zip
+          curl -L https://github.com/mwittrock/cpilint/releases/latest/download/cpilint.zip -o cpilint.zip
           unzip cpilint.zip -d cpilint
           chmod u+x cpilint/bin/cpilint
           echo "$GITHUB_WORKSPACE/cpilint/bin" >> $GITHUB_PATH
