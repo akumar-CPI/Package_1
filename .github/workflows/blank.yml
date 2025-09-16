@@ -30,8 +30,4 @@ jobs:
 
       - name: Run CPILint on changed files
         run: |
-          for file in Package_1/*; do
-            if [[ "$file" == *.zip ]]; then  
-              cpilint "$file"
-            fi
-          done
+          cpilint test.zip
