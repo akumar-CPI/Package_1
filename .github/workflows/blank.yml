@@ -32,6 +32,6 @@ jobs:
         run: |
           for file in Package_1/*; do
             if [[ "$file" == *.zip ]]; then  
-              java -jar cpilint/dist-files/cpilint.jar "$file"
+              cpilint "$file"
             fi
           done
