@@ -30,4 +30,4 @@ jobs:
 
       - name: Run CPILint on changed files
         run: |
-          cpilint -rules roless.xsd -files test.zip
+          cpilint -rules roles.xml -files test.zip
