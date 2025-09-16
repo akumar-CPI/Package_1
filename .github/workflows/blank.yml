@@ -23,7 +23,7 @@ jobs:
 
       - name: Download CPILint relase
         run: |
-          wget https://github.com/mwittrock/cpilint/releases/tag/v1.1.0/cpilint-1.0.0.zip -O cpilint.zip
+          wget https://github.com/mwittrock/cpilint/releases/download/v1.1.0/cpilint-1.0.0.zip -O cpilint.zip
           unzip cpilint.zip -d cpilint
           chmod u+x cpilint/bin/cpilint
           echo "$GITHUB_WORKSPACE/cpilint/bin" >> $GITHUB_PATH
