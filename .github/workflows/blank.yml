@@ -30,4 +30,4 @@ jobs:
 
       - name: Run CPILint on changed files
         run: |
-          cpilint -rules rules.xml -package PKG001.zip
+          cpilint -rules rules.xml -files test.zip -debug -boring
