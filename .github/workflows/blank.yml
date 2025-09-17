@@ -32,3 +32,4 @@ jobs:
         run: |
           cpilint -rules rules.xml -files test.zip
           cpilint -debug > cpilint.log
+          cat cpilint.log
