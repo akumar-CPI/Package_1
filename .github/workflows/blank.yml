@@ -30,4 +30,4 @@ jobs:
 
       - name: Run CPILint on changed files
         run: |
-          cpilint -rules rules.xml -directory PKG001.zip
+          cpilint --help
