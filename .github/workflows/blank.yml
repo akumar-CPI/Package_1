@@ -30,4 +30,5 @@ jobs:
 
       - name: Run CPILint on changed files
         run: |
-          cpilint -debug -rules rules.xml -files test.zip -boring
+          cpilint -rules rules.xml -files test.zip
+          cpilint -debug > cpilint.log
