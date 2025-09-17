@@ -30,7 +30,7 @@ jobs:
 
       - name: Run CPILint on changed files
         run: |
-          cpilint -rules rules.xml -files Iflow_001.zip > cpilint.txt 2>&1 || true
+          cpilint -boring -rules rules.xml -files Iflow_001.zip > cpilint.txt 2>&1 || true
           cat cpilint.txt
           
       - name: upload cpilint logs
