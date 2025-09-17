@@ -30,12 +30,12 @@ jobs:
 
       - name: Run CPILint on changed files
         run: |
-          cpilint -rules rules.xml -files test.zip > cpilint.log 2>&1 || true
-          cat cpilint.log
+          cpilint -rules rules.xml -files test.zip > cpilint.txt 2>&1 || true
+          cat cpilint.txt
           
       - name: upload cpilint logs
         uses: actions/upload-artifact@v4
         with : 
           name : cpilint-logs
-          path : cpilint.log
+          path : cpilint.txt
           
