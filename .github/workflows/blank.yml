@@ -33,3 +33,10 @@ jobs:
           cpilint -rules rules.xml -files test.zip
           cpilint -debug > cpilint.log
           cat cpilint.log
+          
+      - name: upload cpilint logs
+        uses: actions/upload-artifact@v4
+        with : 
+          name : cpilint-logs
+          path : cpilint.log
+          
