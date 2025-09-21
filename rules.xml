@@ -24,9 +24,13 @@
         <disallowed-sender-adapters>
             <disallow>ftp</disallow>
         </disallowed-sender-adapters>
+        <disallowed-scripting-languages>
+            <disallow>javascript</disallow>
+        </disallowed-scripting-languages>
 
     </rules>
 </cpilint>
+
 
 
 
