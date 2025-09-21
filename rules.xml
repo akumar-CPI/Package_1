@@ -22,12 +22,11 @@
             <apply-to>receiver.name</apply-to>
         </naming>
         <disallowed-sender-adapters>
-            <disallow>https</disallow>
-            <disallow>idoc</disallow>
-            <disallow>sftp</disallow>
+            <disallow>ftp</disallow>
         </disallowed-sender-adapters>
 
     </rules>
 </cpilint>
+
 
 
