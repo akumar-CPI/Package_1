@@ -2,25 +2,25 @@
 <cpilint>
     <rules>
         <iflow-description-required/>
-
-        <disallowed-scripting-languages>
-            <disallow>javascript</disallow>
-        </disallowed-scripting-languages>
-
-        <allowed-receiver-adapters>
-            <allow>odata</allow>
-            <allow>soap</allow>
-            <allow>rfc</allow>
-        </allowed-receiver-adapters>
-
-        <disallowed-receiver-adapters>
-            <disallow>ftp</disallow>
-        </disallowed-receiver-adapters>
-
-        <disallowed-sender-adapters>
-            <disallow>idoc</disallow>
-            <disallow>ftp</disallow>
-        </disallowed-sender-adapters>
+        <naming>
+            <scheme>
+                <starts-with>HTTP_RCV_</starts-with>
+            </scheme>
+            <message>HTTP receiver channel names must start with HTTP_RCV_</message>
+            <apply-to>http-receiver-channel.name</apply-to>
+        </naming>
+        <naming>
+            <scheme>
+                <or>
+                    <starts-with>OP_</starts-with>
+                    <starts-with>B2B_</starts-with>
+                    <starts-with>CP_</starts-with>
+                </or>
+            </scheme>
+            <message>Participant names must start with OP_, B2B_ or CP_</message>
+            <apply-to>sender.name</apply-to>
+            <apply-to>receiver.name</apply-to>
+        </naming>
 
     </rules>
 </cpilint>
