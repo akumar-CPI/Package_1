@@ -21,7 +21,13 @@
             <apply-to>sender.name</apply-to>
             <apply-to>receiver.name</apply-to>
         </naming>
+        <disallowed-sender-adapters>
+            <disallow>https</disallow>
+            <disallow>idoc</disallow>
+            <disallow>sftp</disallow>
+        </disallowed-sender-adapters>
 
     </rules>
 </cpilint>
+
 
