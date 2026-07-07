@@ -5882,16 +5882,6 @@ Error Details - ${property.MainMessage}</value>
             <bpmn2:incoming>SequenceFlow_15034118</bpmn2:incoming>
             <bpmn2:outgoing>SequenceFlow_15034122</bpmn2:outgoing>
         </bpmn2:serviceTask>
-        <bpmn2:startEvent id="StartEvent_0" name="Start 1">
-            <bpmn2:extensionElements>
-                <ifl:property>
-                    <key>cmdVariantUri</key>
-                    <value>ctype::FlowstepVariant/cname::MessageStartEvent</value>
-                </ifl:property>
-            </bpmn2:extensionElements>
-            <bpmn2:outgoing>SequenceFlow_6298</bpmn2:outgoing>
-            <bpmn2:messageEventDefinition/>
-        </bpmn2:startEvent>
         <bpmn2:endEvent id="EndEvent_2" name="End">
             <bpmn2:extensionElements>
                 <ifl:property>
@@ -5906,146 +5896,6 @@ Error Details - ${property.MainMessage}</value>
             <bpmn2:incoming>SequenceFlow_15034162</bpmn2:incoming>
             <bpmn2:messageEventDefinition/>
         </bpmn2:endEvent>
-        <bpmn2:callActivity id="CallActivity_6106" name="Close GLN loop">
-            <bpmn2:extensionElements>
-                <ifl:property>
-                    <key>targetXPath</key>
-                    <value>//to_Item</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>sourceXPath</key>
-                    <value>//A_SalesOrderItemType</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>messageType</key>
-                    <value>SameXMLFormat</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>aggregationAlgorithm</key>
-                    <value>xpath-merge-strategy</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>componentVersion</key>
-                    <value>1.2</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>activityType</key>
-                    <value>Gather</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>cmdVariantUri</key>
-                    <value>ctype::FlowstepVariant/cname::Gather/version::1.2.0</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>gatherFileNames</key>
-                    <value/>
-                </ifl:property>
-            </bpmn2:extensionElements>
-            <bpmn2:incoming>SequenceFlow_6395</bpmn2:incoming>
-            <bpmn2:outgoing>SequenceFlow_6125</bpmn2:outgoing>
-        </bpmn2:callActivity>
-        <bpmn2:callActivity id="CallActivity_6347" name="Get and Validate Contract">
-            <bpmn2:extensionElements>
-                <ifl:property>
-                    <key>processId</key>
-                    <value>Process_6343</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>componentVersion</key>
-                    <value>1.0</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>activityType</key>
-                    <value>ProcessCallElement</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>cmdVariantUri</key>
-                    <value>ctype::FlowstepVariant/cname::NonLoopingProcess/version::1.0.3</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>subActivityType</key>
-                    <value>NonLoopingProcess</value>
-                </ifl:property>
-            </bpmn2:extensionElements>
-        </bpmn2:callActivity>
-        <bpmn2:callActivity id="CallActivity_6221" name="Get SP and BP">
-            <bpmn2:extensionElements>
-                <ifl:property>
-                    <key>processId</key>
-                    <value>Process_6217</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>componentVersion</key>
-                    <value>1.0</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>activityType</key>
-                    <value>ProcessCallElement</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>cmdVariantUri</key>
-                    <value>ctype::FlowstepVariant/cname::NonLoopingProcess/version::1.0.3</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>subActivityType</key>
-                    <value>NonLoopingProcess</value>
-                </ifl:property>
-            </bpmn2:extensionElements>
-            <bpmn2:incoming>SequenceFlow_6229</bpmn2:incoming>
-            <bpmn2:outgoing>SequenceFlow_6231</bpmn2:outgoing>
-        </bpmn2:callActivity>
-        <bpmn2:callActivity id="CallActivity_6160" name="Get Material Details">
-            <bpmn2:extensionElements>
-                <ifl:property>
-                    <key>processId</key>
-                    <value>Process_6149</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>componentVersion</key>
-                    <value>1.0</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>activityType</key>
-                    <value>ProcessCallElement</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>cmdVariantUri</key>
-                    <value>ctype::FlowstepVariant/cname::NonLoopingProcess/version::1.0.3</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>subActivityType</key>
-                    <value>NonLoopingProcess</value>
-                </ifl:property>
-            </bpmn2:extensionElements>
-            <bpmn2:incoming>SequenceFlow_6161</bpmn2:incoming>
-            <bpmn2:outgoing>SequenceFlow_15034139</bpmn2:outgoing>
-        </bpmn2:callActivity>
-        <bpmn2:callActivity id="CallActivity_6132" name="Fetch BPs">
-            <bpmn2:extensionElements>
-                <ifl:property>
-                    <key>processId</key>
-                    <value>Process_6128</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>componentVersion</key>
-                    <value>1.0</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>activityType</key>
-                    <value>ProcessCallElement</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>cmdVariantUri</key>
-                    <value>ctype::FlowstepVariant/cname::NonLoopingProcess/version::1.0.3</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>subActivityType</key>
-                    <value>NonLoopingProcess</value>
-                </ifl:property>
-            </bpmn2:extensionElements>
-            <bpmn2:incoming>SequenceFlow_6140</bpmn2:incoming>
-            <bpmn2:outgoing>SequenceFlow_6141</bpmn2:outgoing>
-        </bpmn2:callActivity>
         <bpmn2:callActivity id="CallActivity_6098" name="Store the count">
             <bpmn2:extensionElements>
                 <ifl:property>
@@ -6554,7 +6404,7 @@ Error Details - ${property.MainMessage}</value>
                 </ifl:property>
                 <ifl:property>
                     <key>headerTable</key>
-                    <value>&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;constant&lt;/cell&gt;&lt;cell id='Value'&gt;ZSD_RECEIVE_EDI_ORDERS_PRD&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;interfaceId&lt;/cell&gt;&lt;cell id='Datatype'&gt;&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;constant&lt;/cell&gt;&lt;cell id='Value'&gt;ZSD_RECEIVE_EDI_ORDERS_PRD&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;interfaceName&lt;/cell&gt;&lt;cell id='Datatype'&gt;&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;constant&lt;/cell&gt;&lt;cell id='Value'&gt;EDI PRD&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;packageName&lt;/cell&gt;&lt;cell id='Datatype'&gt;&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;constant&lt;/cell&gt;&lt;cell id='Value'&gt;EDI PRD&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;packageName&lt;/cell&gt;&lt;cell id='Datatype'&gt;&lt;/cell&gt;&lt;/row&gt;</value>
+                    <value>&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;constant&lt;/cell&gt;&lt;cell id='Value'&gt;Yes&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;QatarRelease&lt;/cell&gt;&lt;cell id='Datatype'&gt;&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;constant&lt;/cell&gt;&lt;cell id='Value'&gt;ZSD_RECEIVE_EDI_ORDERS_PRD&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;interfaceId&lt;/cell&gt;&lt;cell id='Datatype'&gt;&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;constant&lt;/cell&gt;&lt;cell id='Value'&gt;ZSD_RECEIVE_EDI_ORDERS_PRD&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;interfaceName&lt;/cell&gt;&lt;cell id='Datatype'&gt;&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;constant&lt;/cell&gt;&lt;cell id='Value'&gt;EDI PRD&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;packageName&lt;/cell&gt;&lt;cell id='Datatype'&gt;&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;constant&lt;/cell&gt;&lt;cell id='Value'&gt;EDI PRD&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;packageName&lt;/cell&gt;&lt;cell id='Datatype'&gt;&lt;/cell&gt;&lt;/row&gt;</value>
                 </ifl:property>
                 <ifl:property>
                     <key>wrapContent</key>
@@ -6609,6 +6459,225 @@ Error Details - ${property.MainMessage}</value>
             </bpmn2:extensionElements>
             <bpmn2:incoming>SequenceFlow_6042</bpmn2:incoming>
             <bpmn2:outgoing>SequenceFlow_6140</bpmn2:outgoing>
+        </bpmn2:callActivity>
+        <bpmn2:exclusiveGateway default="SequenceFlow_15034145" id="ExclusiveGateway_6068" name="Number Of Sales Area">
+            <bpmn2:extensionElements>
+                <ifl:property>
+                    <key>componentVersion</key>
+                    <value>1.1</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>activityType</key>
+                    <value>ExclusiveGateway</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>cmdVariantUri</key>
+                    <value>ctype::FlowstepVariant/cname::ExclusiveGateway/version::1.1.2</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>throwException</key>
+                    <value>false</value>
+                </ifl:property>
+            </bpmn2:extensionElements>
+            <bpmn2:incoming>SequenceFlow_6099</bpmn2:incoming>
+            <bpmn2:outgoing>SequenceFlow_6080</bpmn2:outgoing>
+            <bpmn2:outgoing>SequenceFlow_15034145</bpmn2:outgoing>
+        </bpmn2:exclusiveGateway>
+        <bpmn2:exclusiveGateway default="SequenceFlow_15034147" id="ExclusiveGateway_15034135" name="Sales Area with 10">
+            <bpmn2:extensionElements>
+                <ifl:property>
+                    <key>componentVersion</key>
+                    <value>1.1</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>activityType</key>
+                    <value>ExclusiveGateway</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>cmdVariantUri</key>
+                    <value>ctype::FlowstepVariant/cname::ExclusiveGateway/version::1.1.2</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>throwException</key>
+                    <value>false</value>
+                </ifl:property>
+            </bpmn2:extensionElements>
+            <bpmn2:incoming>SequenceFlow_6228</bpmn2:incoming>
+            <bpmn2:outgoing>SequenceFlow_15034136</bpmn2:outgoing>
+            <bpmn2:outgoing>SequenceFlow_15034147</bpmn2:outgoing>
+        </bpmn2:exclusiveGateway>
+        <bpmn2:exclusiveGateway default="SequenceFlow_15034134" id="ExclusiveGateway_15034131" name="BP exists or Not">
+            <bpmn2:extensionElements>
+                <ifl:property>
+                    <key>componentVersion</key>
+                    <value>1.1</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>activityType</key>
+                    <value>ExclusiveGateway</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>cmdVariantUri</key>
+                    <value>ctype::FlowstepVariant/cname::ExclusiveGateway/version::1.1.2</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>throwException</key>
+                    <value>false</value>
+                </ifl:property>
+            </bpmn2:extensionElements>
+            <bpmn2:incoming>SequenceFlow_15034114</bpmn2:incoming>
+            <bpmn2:outgoing>SequenceFlow_15034132</bpmn2:outgoing>
+            <bpmn2:outgoing>SequenceFlow_15034134</bpmn2:outgoing>
+        </bpmn2:exclusiveGateway>
+        <bpmn2:startEvent id="StartEvent_0" name="Start 1">
+            <bpmn2:extensionElements>
+                <ifl:property>
+                    <key>cmdVariantUri</key>
+                    <value>ctype::FlowstepVariant/cname::MessageStartEvent</value>
+                </ifl:property>
+            </bpmn2:extensionElements>
+            <bpmn2:outgoing>SequenceFlow_6298</bpmn2:outgoing>
+            <bpmn2:messageEventDefinition/>
+        </bpmn2:startEvent>
+        <bpmn2:callActivity id="CallActivity_6106" name="Close GLN loop">
+            <bpmn2:extensionElements>
+                <ifl:property>
+                    <key>targetXPath</key>
+                    <value>//to_Item</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>sourceXPath</key>
+                    <value>//A_SalesOrderItemType</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>messageType</key>
+                    <value>SameXMLFormat</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>aggregationAlgorithm</key>
+                    <value>xpath-merge-strategy</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>componentVersion</key>
+                    <value>1.2</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>activityType</key>
+                    <value>Gather</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>cmdVariantUri</key>
+                    <value>ctype::FlowstepVariant/cname::Gather/version::1.2.0</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>gatherFileNames</key>
+                    <value/>
+                </ifl:property>
+            </bpmn2:extensionElements>
+            <bpmn2:incoming>SequenceFlow_6395</bpmn2:incoming>
+            <bpmn2:outgoing>SequenceFlow_6125</bpmn2:outgoing>
+        </bpmn2:callActivity>
+        <bpmn2:callActivity id="CallActivity_6347" name="Get and Validate Contract">
+            <bpmn2:extensionElements>
+                <ifl:property>
+                    <key>processId</key>
+                    <value>Process_6343</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>componentVersion</key>
+                    <value>1.0</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>activityType</key>
+                    <value>ProcessCallElement</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>cmdVariantUri</key>
+                    <value>ctype::FlowstepVariant/cname::NonLoopingProcess/version::1.0.3</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>subActivityType</key>
+                    <value>NonLoopingProcess</value>
+                </ifl:property>
+            </bpmn2:extensionElements>
+        </bpmn2:callActivity>
+        <bpmn2:callActivity id="CallActivity_6221" name="Get SP and BP">
+            <bpmn2:extensionElements>
+                <ifl:property>
+                    <key>processId</key>
+                    <value>Process_6217</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>componentVersion</key>
+                    <value>1.0</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>activityType</key>
+                    <value>ProcessCallElement</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>cmdVariantUri</key>
+                    <value>ctype::FlowstepVariant/cname::NonLoopingProcess/version::1.0.3</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>subActivityType</key>
+                    <value>NonLoopingProcess</value>
+                </ifl:property>
+            </bpmn2:extensionElements>
+            <bpmn2:incoming>SequenceFlow_6229</bpmn2:incoming>
+            <bpmn2:outgoing>SequenceFlow_6231</bpmn2:outgoing>
+        </bpmn2:callActivity>
+        <bpmn2:callActivity id="CallActivity_6160" name="Get Material Details">
+            <bpmn2:extensionElements>
+                <ifl:property>
+                    <key>processId</key>
+                    <value>Process_6149</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>componentVersion</key>
+                    <value>1.0</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>activityType</key>
+                    <value>ProcessCallElement</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>cmdVariantUri</key>
+                    <value>ctype::FlowstepVariant/cname::NonLoopingProcess/version::1.0.3</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>subActivityType</key>
+                    <value>NonLoopingProcess</value>
+                </ifl:property>
+            </bpmn2:extensionElements>
+            <bpmn2:incoming>SequenceFlow_6161</bpmn2:incoming>
+            <bpmn2:outgoing>SequenceFlow_15034139</bpmn2:outgoing>
+        </bpmn2:callActivity>
+        <bpmn2:callActivity id="CallActivity_6132" name="Fetch BPs">
+            <bpmn2:extensionElements>
+                <ifl:property>
+                    <key>processId</key>
+                    <value>Process_6128</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>componentVersion</key>
+                    <value>1.0</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>activityType</key>
+                    <value>ProcessCallElement</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>cmdVariantUri</key>
+                    <value>ctype::FlowstepVariant/cname::NonLoopingProcess/version::1.0.3</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>subActivityType</key>
+                    <value>NonLoopingProcess</value>
+                </ifl:property>
+            </bpmn2:extensionElements>
+            <bpmn2:incoming>SequenceFlow_6140</bpmn2:incoming>
+            <bpmn2:outgoing>SequenceFlow_6141</bpmn2:outgoing>
         </bpmn2:callActivity>
         <bpmn2:callActivity id="CallActivity_6100" name="Loop on all GLN to get Mat No.">
             <bpmn2:extensionElements>
@@ -6802,75 +6871,6 @@ Error Details - ${property.MainMessage}</value>
             <bpmn2:incoming>SequenceFlow_15034132</bpmn2:incoming>
             <bpmn2:outgoing>SequenceFlow_15034116</bpmn2:outgoing>
         </bpmn2:callActivity>
-        <bpmn2:exclusiveGateway default="SequenceFlow_15034145" id="ExclusiveGateway_6068" name="Number Of Sales Area">
-            <bpmn2:extensionElements>
-                <ifl:property>
-                    <key>componentVersion</key>
-                    <value>1.1</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>activityType</key>
-                    <value>ExclusiveGateway</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>cmdVariantUri</key>
-                    <value>ctype::FlowstepVariant/cname::ExclusiveGateway/version::1.1.2</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>throwException</key>
-                    <value>false</value>
-                </ifl:property>
-            </bpmn2:extensionElements>
-            <bpmn2:incoming>SequenceFlow_6099</bpmn2:incoming>
-            <bpmn2:outgoing>SequenceFlow_6080</bpmn2:outgoing>
-            <bpmn2:outgoing>SequenceFlow_15034145</bpmn2:outgoing>
-        </bpmn2:exclusiveGateway>
-        <bpmn2:exclusiveGateway default="SequenceFlow_15034147" id="ExclusiveGateway_15034135" name="Sales Area with 10">
-            <bpmn2:extensionElements>
-                <ifl:property>
-                    <key>componentVersion</key>
-                    <value>1.1</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>activityType</key>
-                    <value>ExclusiveGateway</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>cmdVariantUri</key>
-                    <value>ctype::FlowstepVariant/cname::ExclusiveGateway/version::1.1.2</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>throwException</key>
-                    <value>false</value>
-                </ifl:property>
-            </bpmn2:extensionElements>
-            <bpmn2:incoming>SequenceFlow_6228</bpmn2:incoming>
-            <bpmn2:outgoing>SequenceFlow_15034136</bpmn2:outgoing>
-            <bpmn2:outgoing>SequenceFlow_15034147</bpmn2:outgoing>
-        </bpmn2:exclusiveGateway>
-        <bpmn2:exclusiveGateway default="SequenceFlow_15034134" id="ExclusiveGateway_15034131" name="BP exists or Not">
-            <bpmn2:extensionElements>
-                <ifl:property>
-                    <key>componentVersion</key>
-                    <value>1.1</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>activityType</key>
-                    <value>ExclusiveGateway</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>cmdVariantUri</key>
-                    <value>ctype::FlowstepVariant/cname::ExclusiveGateway/version::1.1.2</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>throwException</key>
-                    <value>false</value>
-                </ifl:property>
-            </bpmn2:extensionElements>
-            <bpmn2:incoming>SequenceFlow_15034114</bpmn2:incoming>
-            <bpmn2:outgoing>SequenceFlow_15034132</bpmn2:outgoing>
-            <bpmn2:outgoing>SequenceFlow_15034134</bpmn2:outgoing>
-        </bpmn2:exclusiveGateway>
         <bpmn2:sequenceFlow id="SequenceFlow_15034138" sourceRef="CallActivity_6108" targetRef="CallActivity_6126"/>
         <bpmn2:sequenceFlow id="SequenceFlow_15034168" sourceRef="CallActivity_15034167" targetRef="CallActivity_6030"/>
         <bpmn2:sequenceFlow id="SequenceFlow_15034125" sourceRef="CallActivity_15034121" targetRef="CallActivity_15034123"/>
@@ -6884,11 +6884,6 @@ Error Details - ${property.MainMessage}</value>
         <bpmn2:sequenceFlow id="SequenceFlow_6228" sourceRef="ServiceTask_6035" targetRef="ExclusiveGateway_15034135"/>
         <bpmn2:sequenceFlow id="SequenceFlow_15034110" sourceRef="ServiceTask_6019" targetRef="CallActivity_6466"/>
         <bpmn2:sequenceFlow id="SequenceFlow_15034122" sourceRef="ServiceTask_15034117" targetRef="CallActivity_15034121"/>
-        <bpmn2:sequenceFlow id="SequenceFlow_6298" sourceRef="StartEvent_0" targetRef="CallActivity_6297"/>
-        <bpmn2:sequenceFlow id="SequenceFlow_6125" sourceRef="CallActivity_6106" targetRef="CallActivity_6108"/>
-        <bpmn2:sequenceFlow id="SequenceFlow_6231" sourceRef="CallActivity_6221" targetRef="CallActivity_6230"/>
-        <bpmn2:sequenceFlow id="SequenceFlow_15034139" sourceRef="CallActivity_6160" targetRef="CallActivity_6394"/>
-        <bpmn2:sequenceFlow id="SequenceFlow_6141" sourceRef="CallActivity_6132" targetRef="ServiceTask_6064"/>
         <bpmn2:sequenceFlow id="SequenceFlow_6099" sourceRef="CallActivity_6098" targetRef="ExclusiveGateway_6068"/>
         <bpmn2:sequenceFlow id="SequenceFlow_15034089" sourceRef="CallActivity_15034088" targetRef="ServiceTask_15034085"/>
         <bpmn2:sequenceFlow id="SequenceFlow_15034096" sourceRef="CallActivity_15034092" targetRef="ServiceTask_15034075"/>
@@ -6904,10 +6899,6 @@ Error Details - ${property.MainMessage}</value>
         <bpmn2:sequenceFlow id="SequenceFlow_6229" sourceRef="CallActivity_6055" targetRef="CallActivity_6221"/>
         <bpmn2:sequenceFlow id="SequenceFlow_6299" sourceRef="CallActivity_6297" targetRef="CallActivity_15034167"/>
         <bpmn2:sequenceFlow id="SequenceFlow_6140" sourceRef="CallActivity_6033" targetRef="CallActivity_6132"/>
-        <bpmn2:sequenceFlow id="SequenceFlow_6161" sourceRef="CallActivity_6100" targetRef="CallActivity_6160"/>
-        <bpmn2:sequenceFlow id="SequenceFlow_15034086" sourceRef="CallActivity_15034081" targetRef="CallActivity_15034088"/>
-        <bpmn2:sequenceFlow id="SequenceFlow_6112" sourceRef="CallActivity_6023" targetRef="CallActivity_6111"/>
-        <bpmn2:sequenceFlow id="SequenceFlow_15034116" sourceRef="CallActivity_15034113" targetRef="CallActivity_15034115"/>
         <bpmn2:sequenceFlow id="SequenceFlow_6080" name="Multiple Sales Area " sourceRef="ExclusiveGateway_6068" targetRef="ServiceTask_6035">
             <bpmn2:extensionElements>
                 <ifl:property>
@@ -6923,7 +6914,7 @@ Error Details - ${property.MainMessage}</value>
                     <value>ctype::FlowstepVariant/cname::GatewayRoute/version::1.0.0</value>
                 </ifl:property>
             </bpmn2:extensionElements>
-            <bpmn2:conditionExpression id="FormalExpression_SequenceFlow_6080_1748620165910" xsi:type="bpmn2:tFormalExpression">${property.Count_Sales_Area} &gt; '1'</bpmn2:conditionExpression>
+            <bpmn2:conditionExpression id="FormalExpression_SequenceFlow_6080_1783424823236" xsi:type="bpmn2:tFormalExpression">${property.Count_Sales_Area} &gt; '1'</bpmn2:conditionExpression>
         </bpmn2:sequenceFlow>
         <bpmn2:sequenceFlow id="SequenceFlow_15034145" name="Multiple Sales area" sourceRef="ExclusiveGateway_6068" targetRef="ServiceTask_15034144">
             <bpmn2:extensionElements>
@@ -6956,7 +6947,7 @@ Error Details - ${property.MainMessage}</value>
                     <value>ctype::FlowstepVariant/cname::GatewayRoute/version::1.0.0</value>
                 </ifl:property>
             </bpmn2:extensionElements>
-            <bpmn2:conditionExpression id="FormalExpression_SequenceFlow_15034136_1748620165910" xsi:type="bpmn2:tFormalExpression">//SalesOrganization</bpmn2:conditionExpression>
+            <bpmn2:conditionExpression id="FormalExpression_SequenceFlow_15034136_1783424823236" xsi:type="bpmn2:tFormalExpression">//SalesOrganization</bpmn2:conditionExpression>
         </bpmn2:sequenceFlow>
         <bpmn2:sequenceFlow id="SequenceFlow_15034147" name="Not Found" sourceRef="ExclusiveGateway_15034135" targetRef="ServiceTask_15034144">
             <bpmn2:extensionElements>
@@ -6989,7 +6980,7 @@ Error Details - ${property.MainMessage}</value>
                     <value>ctype::FlowstepVariant/cname::GatewayRoute/version::1.0.0</value>
                 </ifl:property>
             </bpmn2:extensionElements>
-            <bpmn2:conditionExpression id="FormalExpression_SequenceFlow_15034132_1748620165911" xsi:type="bpmn2:tFormalExpression">${property.Customer_No_BP} != ''</bpmn2:conditionExpression>
+            <bpmn2:conditionExpression id="FormalExpression_SequenceFlow_15034132_1783424823237" xsi:type="bpmn2:tFormalExpression">${property.Customer_No_BP} != ''</bpmn2:conditionExpression>
         </bpmn2:sequenceFlow>
         <bpmn2:sequenceFlow id="SequenceFlow_15034134" name="No" sourceRef="ExclusiveGateway_15034131" targetRef="CallActivity_15034161">
             <bpmn2:extensionElements>
@@ -7007,6 +6998,15 @@ Error Details - ${property.MainMessage}</value>
                 </ifl:property>
             </bpmn2:extensionElements>
         </bpmn2:sequenceFlow>
+        <bpmn2:sequenceFlow id="SequenceFlow_6298" sourceRef="StartEvent_0" targetRef="CallActivity_6297"/>
+        <bpmn2:sequenceFlow id="SequenceFlow_6125" sourceRef="CallActivity_6106" targetRef="CallActivity_6108"/>
+        <bpmn2:sequenceFlow id="SequenceFlow_6231" sourceRef="CallActivity_6221" targetRef="CallActivity_6230"/>
+        <bpmn2:sequenceFlow id="SequenceFlow_15034139" sourceRef="CallActivity_6160" targetRef="CallActivity_6394"/>
+        <bpmn2:sequenceFlow id="SequenceFlow_6141" sourceRef="CallActivity_6132" targetRef="ServiceTask_6064"/>
+        <bpmn2:sequenceFlow id="SequenceFlow_6161" sourceRef="CallActivity_6100" targetRef="CallActivity_6160"/>
+        <bpmn2:sequenceFlow id="SequenceFlow_15034086" sourceRef="CallActivity_15034081" targetRef="CallActivity_15034088"/>
+        <bpmn2:sequenceFlow id="SequenceFlow_6112" sourceRef="CallActivity_6023" targetRef="CallActivity_6111"/>
+        <bpmn2:sequenceFlow id="SequenceFlow_15034116" sourceRef="CallActivity_15034113" targetRef="CallActivity_15034115"/>
     </bpmn2:process>
     <bpmn2:process id="Process_6276" name="Customer Material Info Record">
         <bpmn2:extensionElements>
@@ -7031,19 +7031,6 @@ Error Details - ${property.MainMessage}</value>
                 <value>From Calling Process</value>
             </ifl:property>
         </bpmn2:extensionElements>
-        <bpmn2:startEvent id="StartEvent_6277" name="Start 6">
-            <bpmn2:extensionElements>
-                <ifl:property>
-                    <key>cmdVariantUri</key>
-                    <value>ctype::FlowstepVariant/cname::StartEvent</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>activityType</key>
-                    <value>StartEvent</value>
-                </ifl:property>
-            </bpmn2:extensionElements>
-            <bpmn2:outgoing>SequenceFlow_6280</bpmn2:outgoing>
-        </bpmn2:startEvent>
         <bpmn2:serviceTask id="ServiceTask_6114" name="GetAllMaterials">
             <bpmn2:extensionElements>
                 <ifl:property>
@@ -7093,6 +7080,53 @@ Error Details - ${property.MainMessage}</value>
             </bpmn2:extensionElements>
             <bpmn2:incoming>SequenceFlow_6291</bpmn2:incoming>
         </bpmn2:endEvent>
+        <bpmn2:callActivity id="CallActivity_6180" name="Store Material Loop Wise">
+            <bpmn2:extensionElements>
+                <ifl:property>
+                    <key>bodyType</key>
+                    <value>constant</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>propertyTable</key>
+                    <value>&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;xpath&lt;/cell&gt;&lt;cell id='Value'&gt;//Product&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;LoopMaterial&lt;/cell&gt;&lt;cell id='Datatype'&gt;java.lang.String&lt;/cell&gt;&lt;/row&gt;</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>headerTable</key>
+                    <value/>
+                </ifl:property>
+                <ifl:property>
+                    <key>wrapContent</key>
+                    <value/>
+                </ifl:property>
+                <ifl:property>
+                    <key>componentVersion</key>
+                    <value>1.6</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>activityType</key>
+                    <value>Enricher</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>cmdVariantUri</key>
+                    <value>ctype::FlowstepVariant/cname::Enricher/version::1.6.0</value>
+                </ifl:property>
+            </bpmn2:extensionElements>
+            <bpmn2:incoming>SequenceFlow_6288</bpmn2:incoming>
+            <bpmn2:outgoing>SequenceFlow_6282</bpmn2:outgoing>
+        </bpmn2:callActivity>
+        <bpmn2:startEvent id="StartEvent_6277" name="Start 6">
+            <bpmn2:extensionElements>
+                <ifl:property>
+                    <key>cmdVariantUri</key>
+                    <value>ctype::FlowstepVariant/cname::StartEvent</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>activityType</key>
+                    <value>StartEvent</value>
+                </ifl:property>
+            </bpmn2:extensionElements>
+            <bpmn2:outgoing>SequenceFlow_6280</bpmn2:outgoing>
+        </bpmn2:startEvent>
         <bpmn2:callActivity id="CallActivity_6289" name="End Customer Loop">
             <bpmn2:extensionElements>
                 <ifl:property>
@@ -7130,40 +7164,6 @@ Error Details - ${property.MainMessage}</value>
             </bpmn2:extensionElements>
             <bpmn2:incoming>SequenceFlow_6293</bpmn2:incoming>
             <bpmn2:outgoing>SequenceFlow_6291</bpmn2:outgoing>
-        </bpmn2:callActivity>
-        <bpmn2:callActivity id="CallActivity_6180" name="Store Material Loop Wise">
-            <bpmn2:extensionElements>
-                <ifl:property>
-                    <key>bodyType</key>
-                    <value>constant</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>propertyTable</key>
-                    <value>&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;xpath&lt;/cell&gt;&lt;cell id='Value'&gt;//Product&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;LoopMaterial&lt;/cell&gt;&lt;cell id='Datatype'&gt;java.lang.String&lt;/cell&gt;&lt;/row&gt;</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>headerTable</key>
-                    <value/>
-                </ifl:property>
-                <ifl:property>
-                    <key>wrapContent</key>
-                    <value/>
-                </ifl:property>
-                <ifl:property>
-                    <key>componentVersion</key>
-                    <value>1.6</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>activityType</key>
-                    <value>Enricher</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>cmdVariantUri</key>
-                    <value>ctype::FlowstepVariant/cname::Enricher/version::1.6.0</value>
-                </ifl:property>
-            </bpmn2:extensionElements>
-            <bpmn2:incoming>SequenceFlow_6288</bpmn2:incoming>
-            <bpmn2:outgoing>SequenceFlow_6282</bpmn2:outgoing>
         </bpmn2:callActivity>
         <bpmn2:callActivity id="CallActivity_6287" name="Looping on all customer material">
             <bpmn2:extensionElements>
@@ -7219,11 +7219,11 @@ Error Details - ${property.MainMessage}</value>
             <bpmn2:incoming>SequenceFlow_6281</bpmn2:incoming>
             <bpmn2:outgoing>SequenceFlow_6288</bpmn2:outgoing>
         </bpmn2:callActivity>
-        <bpmn2:sequenceFlow id="SequenceFlow_6280" sourceRef="StartEvent_6277" targetRef="ServiceTask_6114"/>
         <bpmn2:sequenceFlow id="SequenceFlow_6281" sourceRef="ServiceTask_6114" targetRef="CallActivity_6287"/>
         <bpmn2:sequenceFlow id="SequenceFlow_6293" sourceRef="ServiceTask_6258" targetRef="CallActivity_6289"/>
-        <bpmn2:sequenceFlow id="SequenceFlow_6291" sourceRef="CallActivity_6289" targetRef="EndEvent_6278"/>
         <bpmn2:sequenceFlow id="SequenceFlow_6282" sourceRef="CallActivity_6180" targetRef="ServiceTask_6258"/>
+        <bpmn2:sequenceFlow id="SequenceFlow_6280" sourceRef="StartEvent_6277" targetRef="ServiceTask_6114"/>
+        <bpmn2:sequenceFlow id="SequenceFlow_6291" sourceRef="CallActivity_6289" targetRef="EndEvent_6278"/>
         <bpmn2:sequenceFlow id="SequenceFlow_6288" sourceRef="CallActivity_6287" targetRef="CallActivity_6180"/>
     </bpmn2:process>
     <bpmn2:process id="Process_6149" name="Get Material Details">
@@ -7249,19 +7249,6 @@ Error Details - ${property.MainMessage}</value>
                 <value>From Calling Process</value>
             </ifl:property>
         </bpmn2:extensionElements>
-        <bpmn2:startEvent id="StartEvent_6150" name="Start 3">
-            <bpmn2:extensionElements>
-                <ifl:property>
-                    <key>cmdVariantUri</key>
-                    <value>ctype::FlowstepVariant/cname::StartEvent</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>activityType</key>
-                    <value>StartEvent</value>
-                </ifl:property>
-            </bpmn2:extensionElements>
-            <bpmn2:outgoing>SequenceFlow_6152</bpmn2:outgoing>
-        </bpmn2:startEvent>
         <bpmn2:callActivity id="CallActivity_6416" name="Make Item text Blank">
             <bpmn2:extensionElements>
                 <ifl:property>
@@ -7536,59 +7523,6 @@ Error Details - ${property.MainMessage}</value>
             </bpmn2:extensionElements>
             <bpmn2:incoming>SequenceFlow_6392</bpmn2:incoming>
         </bpmn2:endEvent>
-        <bpmn2:callActivity id="CallActivity_6427" name="Get Shipping Point and Stor Loc">
-            <bpmn2:extensionElements>
-                <ifl:property>
-                    <key>processId</key>
-                    <value>Process_6423</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>componentVersion</key>
-                    <value>1.0</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>activityType</key>
-                    <value>ProcessCallElement</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>cmdVariantUri</key>
-                    <value>ctype::FlowstepVariant/cname::NonLoopingProcess/version::1.0.3</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>subActivityType</key>
-                    <value>NonLoopingProcess</value>
-                </ifl:property>
-            </bpmn2:extensionElements>
-            <bpmn2:incoming>SequenceFlow_6430</bpmn2:incoming>
-            <bpmn2:incoming>SequenceFlow_6330</bpmn2:incoming>
-            <bpmn2:outgoing>SequenceFlow_6428</bpmn2:outgoing>
-        </bpmn2:callActivity>
-        <bpmn2:callActivity id="CallActivity_6285" name="Get Customer Material Info Record">
-            <bpmn2:extensionElements>
-                <ifl:property>
-                    <key>processId</key>
-                    <value>Process_6276</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>componentVersion</key>
-                    <value>1.0</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>activityType</key>
-                    <value>ProcessCallElement</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>cmdVariantUri</key>
-                    <value>ctype::FlowstepVariant/cname::NonLoopingProcess/version::1.0.3</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>subActivityType</key>
-                    <value>NonLoopingProcess</value>
-                </ifl:property>
-            </bpmn2:extensionElements>
-            <bpmn2:incoming>SequenceFlow_6250</bpmn2:incoming>
-            <bpmn2:outgoing>SequenceFlow_6286</bpmn2:outgoing>
-        </bpmn2:callActivity>
         <bpmn2:callActivity id="CallActivity_6311" name="Store ISO UOM">
             <bpmn2:extensionElements>
                 <ifl:property>
@@ -7921,7 +7855,72 @@ Error Details - ${property.MainMessage}</value>
             <bpmn2:outgoing>SequenceFlow_6193</bpmn2:outgoing>
             <bpmn2:outgoing>SequenceFlow_6250</bpmn2:outgoing>
         </bpmn2:exclusiveGateway>
-        <bpmn2:sequenceFlow id="SequenceFlow_6152" sourceRef="StartEvent_6150" targetRef="CallActivity_6103"/>
+        <bpmn2:startEvent id="StartEvent_6150" name="Start 3">
+            <bpmn2:extensionElements>
+                <ifl:property>
+                    <key>cmdVariantUri</key>
+                    <value>ctype::FlowstepVariant/cname::StartEvent</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>activityType</key>
+                    <value>StartEvent</value>
+                </ifl:property>
+            </bpmn2:extensionElements>
+            <bpmn2:outgoing>SequenceFlow_6152</bpmn2:outgoing>
+        </bpmn2:startEvent>
+        <bpmn2:callActivity id="CallActivity_6427" name="Get Shipping Point and Stor Loc">
+            <bpmn2:extensionElements>
+                <ifl:property>
+                    <key>processId</key>
+                    <value>Process_6423</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>componentVersion</key>
+                    <value>1.0</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>activityType</key>
+                    <value>ProcessCallElement</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>cmdVariantUri</key>
+                    <value>ctype::FlowstepVariant/cname::NonLoopingProcess/version::1.0.3</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>subActivityType</key>
+                    <value>NonLoopingProcess</value>
+                </ifl:property>
+            </bpmn2:extensionElements>
+            <bpmn2:incoming>SequenceFlow_6430</bpmn2:incoming>
+            <bpmn2:incoming>SequenceFlow_6330</bpmn2:incoming>
+            <bpmn2:outgoing>SequenceFlow_6428</bpmn2:outgoing>
+        </bpmn2:callActivity>
+        <bpmn2:callActivity id="CallActivity_6285" name="Get Customer Material Info Record">
+            <bpmn2:extensionElements>
+                <ifl:property>
+                    <key>processId</key>
+                    <value>Process_6276</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>componentVersion</key>
+                    <value>1.0</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>activityType</key>
+                    <value>ProcessCallElement</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>cmdVariantUri</key>
+                    <value>ctype::FlowstepVariant/cname::NonLoopingProcess/version::1.0.3</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>subActivityType</key>
+                    <value>NonLoopingProcess</value>
+                </ifl:property>
+            </bpmn2:extensionElements>
+            <bpmn2:incoming>SequenceFlow_6250</bpmn2:incoming>
+            <bpmn2:outgoing>SequenceFlow_6286</bpmn2:outgoing>
+        </bpmn2:callActivity>
         <bpmn2:sequenceFlow id="SequenceFlow_6418" sourceRef="CallActivity_6416" targetRef="CallActivity_6122"/>
         <bpmn2:sequenceFlow id="SequenceFlow_6315" sourceRef="CallActivity_6313" targetRef="CallActivity_6458"/>
         <bpmn2:sequenceFlow id="SequenceFlow_6464" sourceRef="CallActivity_6458" targetRef="CallActivity_6461"/>
@@ -7932,8 +7931,6 @@ Error Details - ${property.MainMessage}</value>
         <bpmn2:sequenceFlow id="SequenceFlow_6269" sourceRef="ServiceTask_6268" targetRef="CallActivity_6189"/>
         <bpmn2:sequenceFlow id="SequenceFlow_6336" sourceRef="ServiceTask_6324" targetRef="ExclusiveGateway_6335"/>
         <bpmn2:sequenceFlow id="SequenceFlow_6341" sourceRef="ServiceTask_6337" targetRef="CallActivity_6311"/>
-        <bpmn2:sequenceFlow id="SequenceFlow_6428" sourceRef="CallActivity_6427" targetRef="ServiceTask_6306"/>
-        <bpmn2:sequenceFlow id="SequenceFlow_6286" sourceRef="CallActivity_6285" targetRef="CallActivity_6295"/>
         <bpmn2:sequenceFlow id="SequenceFlow_6312" sourceRef="CallActivity_6311" targetRef="CallActivity_6119"/>
         <bpmn2:sequenceFlow id="SequenceFlow_6188" sourceRef="CallActivity_6168" targetRef="ExclusiveGateway_6187"/>
         <bpmn2:sequenceFlow id="SequenceFlow_6267" sourceRef="CallActivity_6103" targetRef="ServiceTask_6163"/>
@@ -7956,7 +7953,7 @@ Error Details - ${property.MainMessage}</value>
                     <value>ctype::FlowstepVariant/cname::GatewayRoute/version::1.0.0</value>
                 </ifl:property>
             </bpmn2:extensionElements>
-            <bpmn2:conditionExpression id="FormalExpression_SequenceFlow_6332_1748620165915" xsi:type="bpmn2:tFormalExpression">//UOM_SAP</bpmn2:conditionExpression>
+            <bpmn2:conditionExpression id="FormalExpression_SequenceFlow_6332_1783424823245" xsi:type="bpmn2:tFormalExpression">//UOM_SAP</bpmn2:conditionExpression>
         </bpmn2:sequenceFlow>
         <bpmn2:sequenceFlow id="SequenceFlow_6334" name="Not found with Cust Number" sourceRef="ExclusiveGateway_6331" targetRef="ServiceTask_6324">
             <bpmn2:extensionElements>
@@ -8005,7 +8002,7 @@ Error Details - ${property.MainMessage}</value>
                     <value>ctype::FlowstepVariant/cname::GatewayRoute/version::1.0.0</value>
                 </ifl:property>
             </bpmn2:extensionElements>
-            <bpmn2:conditionExpression id="FormalExpression_SequenceFlow_6342_1748620165915" xsi:type="bpmn2:tFormalExpression">//UOM_SAP</bpmn2:conditionExpression>
+            <bpmn2:conditionExpression id="FormalExpression_SequenceFlow_6342_1783424823245" xsi:type="bpmn2:tFormalExpression">//UOM_SAP</bpmn2:conditionExpression>
         </bpmn2:sequenceFlow>
         <bpmn2:sequenceFlow id="SequenceFlow_6417" name="Yes" sourceRef="ExclusiveGateway_6413" targetRef="CallActivity_6416">
             <bpmn2:extensionElements>
@@ -8022,7 +8019,7 @@ Error Details - ${property.MainMessage}</value>
                     <value>ctype::FlowstepVariant/cname::GatewayRoute/version::1.0.0</value>
                 </ifl:property>
             </bpmn2:extensionElements>
-            <bpmn2:conditionExpression id="FormalExpression_SequenceFlow_6417_1748620165916" xsi:type="bpmn2:tFormalExpression">${property.FinalMaterial} != ''</bpmn2:conditionExpression>
+            <bpmn2:conditionExpression id="FormalExpression_SequenceFlow_6417_1783424823246" xsi:type="bpmn2:tFormalExpression">${property.FinalMaterial} != ''</bpmn2:conditionExpression>
         </bpmn2:sequenceFlow>
         <bpmn2:sequenceFlow id="SequenceFlow_6414" name="No" sourceRef="ExclusiveGateway_6413" targetRef="CallActivity_6122">
             <bpmn2:extensionElements>
@@ -8071,8 +8068,11 @@ Error Details - ${property.MainMessage}</value>
                     <value>ctype::FlowstepVariant/cname::GatewayRoute/version::1.0.0</value>
                 </ifl:property>
             </bpmn2:extensionElements>
-            <bpmn2:conditionExpression id="FormalExpression_SequenceFlow_6250_1748620165916" xsi:type="bpmn2:tFormalExpression">${property.No_Of_Mat} &gt; '1'</bpmn2:conditionExpression>
+            <bpmn2:conditionExpression id="FormalExpression_SequenceFlow_6250_1783424823246" xsi:type="bpmn2:tFormalExpression">${property.No_Of_Mat} &gt; '1'</bpmn2:conditionExpression>
         </bpmn2:sequenceFlow>
+        <bpmn2:sequenceFlow id="SequenceFlow_6152" sourceRef="StartEvent_6150" targetRef="CallActivity_6103"/>
+        <bpmn2:sequenceFlow id="SequenceFlow_6428" sourceRef="CallActivity_6427" targetRef="ServiceTask_6306"/>
+        <bpmn2:sequenceFlow id="SequenceFlow_6286" sourceRef="CallActivity_6285" targetRef="CallActivity_6295"/>
     </bpmn2:process>
     <bpmn2:process id="Process_6343" name="Validate Contract">
         <bpmn2:extensionElements>
@@ -8097,19 +8097,6 @@ Error Details - ${property.MainMessage}</value>
                 <value>From Calling Process</value>
             </ifl:property>
         </bpmn2:extensionElements>
-        <bpmn2:startEvent id="StartEvent_6344" name="Start 7">
-            <bpmn2:extensionElements>
-                <ifl:property>
-                    <key>cmdVariantUri</key>
-                    <value>ctype::FlowstepVariant/cname::StartEvent</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>activityType</key>
-                    <value>StartEvent</value>
-                </ifl:property>
-            </bpmn2:extensionElements>
-            <bpmn2:outgoing>SequenceFlow_6346</bpmn2:outgoing>
-        </bpmn2:startEvent>
         <bpmn2:serviceTask id="ServiceTask_6349" name="Get Contract">
             <bpmn2:extensionElements>
                 <ifl:property>
@@ -8343,7 +8330,19 @@ Error Details - ${property.MainMessage}</value>
             <bpmn2:outgoing>SequenceFlow_6376</bpmn2:outgoing>
             <bpmn2:outgoing>SequenceFlow_6375</bpmn2:outgoing>
         </bpmn2:exclusiveGateway>
-        <bpmn2:sequenceFlow id="SequenceFlow_6346" sourceRef="StartEvent_6344" targetRef="ServiceTask_6349"/>
+        <bpmn2:startEvent id="StartEvent_6344" name="Start 7">
+            <bpmn2:extensionElements>
+                <ifl:property>
+                    <key>cmdVariantUri</key>
+                    <value>ctype::FlowstepVariant/cname::StartEvent</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>activityType</key>
+                    <value>StartEvent</value>
+                </ifl:property>
+            </bpmn2:extensionElements>
+            <bpmn2:outgoing>SequenceFlow_6346</bpmn2:outgoing>
+        </bpmn2:startEvent>
         <bpmn2:sequenceFlow id="SequenceFlow_6350" sourceRef="ServiceTask_6349" targetRef="CallActivity_6398"/>
         <bpmn2:sequenceFlow id="SequenceFlow_6378" sourceRef="ServiceTask_6363" targetRef="ExclusiveGateway_6377"/>
         <bpmn2:sequenceFlow id="SequenceFlow_6409" sourceRef="CallActivity_6408" targetRef="EndEvent_6345"/>
@@ -8365,7 +8364,7 @@ Error Details - ${property.MainMessage}</value>
                     <value>ctype::FlowstepVariant/cname::GatewayRoute/version::1.0.0</value>
                 </ifl:property>
             </bpmn2:extensionElements>
-            <bpmn2:conditionExpression id="FormalExpression_SequenceFlow_6380_1748620165917" xsi:type="bpmn2:tFormalExpression">//SalesContract</bpmn2:conditionExpression>
+            <bpmn2:conditionExpression id="FormalExpression_SequenceFlow_6380_1783424823249" xsi:type="bpmn2:tFormalExpression">//SalesContract</bpmn2:conditionExpression>
         </bpmn2:sequenceFlow>
         <bpmn2:sequenceFlow id="SequenceFlow_6383" name="Contract Item not Valid" sourceRef="ExclusiveGateway_6377" targetRef="CallActivity_6408">
             <bpmn2:extensionElements>
@@ -8414,8 +8413,9 @@ Error Details - ${property.MainMessage}</value>
                     <value>ctype::FlowstepVariant/cname::GatewayRoute/version::1.0.0</value>
                 </ifl:property>
             </bpmn2:extensionElements>
-            <bpmn2:conditionExpression id="FormalExpression_SequenceFlow_6375_1748620165918" xsi:type="bpmn2:tFormalExpression">${property.Contract} != '' and ${property.Contract_Flag} != 'False' </bpmn2:conditionExpression>
+            <bpmn2:conditionExpression id="FormalExpression_SequenceFlow_6375_1783424823249" xsi:type="bpmn2:tFormalExpression">${property.Contract} != '' and ${property.Contract_Flag} != 'False' </bpmn2:conditionExpression>
         </bpmn2:sequenceFlow>
+        <bpmn2:sequenceFlow id="SequenceFlow_6346" sourceRef="StartEvent_6344" targetRef="ServiceTask_6349"/>
     </bpmn2:process>
     <bpmn2:process id="Process_6128" name="Get BPs">
         <bpmn2:extensionElements>
@@ -8440,19 +8440,6 @@ Error Details - ${property.MainMessage}</value>
                 <value>From Calling Process</value>
             </ifl:property>
         </bpmn2:extensionElements>
-        <bpmn2:startEvent id="StartEvent_6135" name="Start 2">
-            <bpmn2:extensionElements>
-                <ifl:property>
-                    <key>cmdVariantUri</key>
-                    <value>ctype::FlowstepVariant/cname::StartEvent</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>activityType</key>
-                    <value>StartEvent</value>
-                </ifl:property>
-            </bpmn2:extensionElements>
-            <bpmn2:outgoing>SequenceFlow_6136</bpmn2:outgoing>
-        </bpmn2:startEvent>
         <bpmn2:callActivity id="CallActivity_6057" name="Store Sold-To-Party">
             <bpmn2:extensionElements>
                 <ifl:property>
@@ -8622,13 +8609,26 @@ Error Details - ${property.MainMessage}</value>
             </bpmn2:extensionElements>
             <bpmn2:incoming>SequenceFlow_6216</bpmn2:incoming>
         </bpmn2:endEvent>
-        <bpmn2:sequenceFlow id="SequenceFlow_6136" sourceRef="StartEvent_6135" targetRef="ServiceTask_6048"/>
+        <bpmn2:startEvent id="StartEvent_6135" name="Start 2">
+            <bpmn2:extensionElements>
+                <ifl:property>
+                    <key>cmdVariantUri</key>
+                    <value>ctype::FlowstepVariant/cname::StartEvent</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>activityType</key>
+                    <value>StartEvent</value>
+                </ifl:property>
+            </bpmn2:extensionElements>
+            <bpmn2:outgoing>SequenceFlow_6136</bpmn2:outgoing>
+        </bpmn2:startEvent>
         <bpmn2:sequenceFlow id="SequenceFlow_6145" sourceRef="CallActivity_6057" targetRef="ServiceTask_6142"/>
         <bpmn2:sequenceFlow id="SequenceFlow_6212" sourceRef="CallActivity_6146" targetRef="ServiceTask_6211"/>
         <bpmn2:sequenceFlow id="SequenceFlow_6216" sourceRef="CallActivity_6214" targetRef="EndEvent_6130"/>
         <bpmn2:sequenceFlow id="SequenceFlow_6137" sourceRef="ServiceTask_6048" targetRef="CallActivity_6057"/>
         <bpmn2:sequenceFlow id="SequenceFlow_6215" sourceRef="ServiceTask_6211" targetRef="CallActivity_6214"/>
         <bpmn2:sequenceFlow id="SequenceFlow_6147" sourceRef="ServiceTask_6142" targetRef="CallActivity_6146"/>
+        <bpmn2:sequenceFlow id="SequenceFlow_6136" sourceRef="StartEvent_6135" targetRef="ServiceTask_6048"/>
     </bpmn2:process>
     <bpmn2:process id="Process_6423" name="Get Shipping Point and Stor Loc">
         <bpmn2:extensionElements>
@@ -8653,19 +8653,6 @@ Error Details - ${property.MainMessage}</value>
                 <value>From Calling Process</value>
             </ifl:property>
         </bpmn2:extensionElements>
-        <bpmn2:startEvent id="StartEvent_6424" name="Start 8">
-            <bpmn2:extensionElements>
-                <ifl:property>
-                    <key>cmdVariantUri</key>
-                    <value>ctype::FlowstepVariant/cname::StartEvent</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>activityType</key>
-                    <value>StartEvent</value>
-                </ifl:property>
-            </bpmn2:extensionElements>
-            <bpmn2:outgoing>SequenceFlow_6426</bpmn2:outgoing>
-        </bpmn2:startEvent>
         <bpmn2:serviceTask id="ServiceTask_6444" name="Get Shipping Point">
             <bpmn2:extensionElements>
                 <ifl:property>
@@ -8887,7 +8874,19 @@ Error Details - ${property.MainMessage}</value>
             <bpmn2:incoming>SequenceFlow_6456</bpmn2:incoming>
             <bpmn2:outgoing>SequenceFlow_6457</bpmn2:outgoing>
         </bpmn2:callActivity>
-        <bpmn2:sequenceFlow id="SequenceFlow_6426" sourceRef="StartEvent_6424" targetRef="ServiceTask_6431"/>
+        <bpmn2:startEvent id="StartEvent_6424" name="Start 8">
+            <bpmn2:extensionElements>
+                <ifl:property>
+                    <key>cmdVariantUri</key>
+                    <value>ctype::FlowstepVariant/cname::StartEvent</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>activityType</key>
+                    <value>StartEvent</value>
+                </ifl:property>
+            </bpmn2:extensionElements>
+            <bpmn2:outgoing>SequenceFlow_6426</bpmn2:outgoing>
+        </bpmn2:startEvent>
         <bpmn2:sequenceFlow id="SequenceFlow_6445" sourceRef="ServiceTask_6444" targetRef="CallActivity_6449"/>
         <bpmn2:sequenceFlow id="SequenceFlow_6456" sourceRef="ServiceTask_6451" targetRef="CallActivity_6455"/>
         <bpmn2:sequenceFlow id="SequenceFlow_6436" sourceRef="ServiceTask_6431" targetRef="CallActivity_6435"/>
@@ -8896,6 +8895,7 @@ Error Details - ${property.MainMessage}</value>
         <bpmn2:sequenceFlow id="SequenceFlow_6454" sourceRef="CallActivity_6449" targetRef="ServiceTask_6451"/>
         <bpmn2:sequenceFlow id="SequenceFlow_6443" sourceRef="CallActivity_6441" targetRef="ServiceTask_6444"/>
         <bpmn2:sequenceFlow id="SequenceFlow_6457" sourceRef="CallActivity_6455" targetRef="EndEvent_6425"/>
+        <bpmn2:sequenceFlow id="SequenceFlow_6426" sourceRef="StartEvent_6424" targetRef="ServiceTask_6431"/>
     </bpmn2:process>
     <bpmn2:process id="Process_6217" name="Get SP and BP">
         <bpmn2:extensionElements>
@@ -8920,19 +8920,6 @@ Error Details - ${property.MainMessage}</value>
                 <value>From Calling Process</value>
             </ifl:property>
         </bpmn2:extensionElements>
-        <bpmn2:startEvent id="StartEvent_6218" name="Start 4">
-            <bpmn2:extensionElements>
-                <ifl:property>
-                    <key>cmdVariantUri</key>
-                    <value>ctype::FlowstepVariant/cname::StartEvent</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>activityType</key>
-                    <value>StartEvent</value>
-                </ifl:property>
-            </bpmn2:extensionElements>
-            <bpmn2:outgoing>SequenceFlow_6220</bpmn2:outgoing>
-        </bpmn2:startEvent>
         <bpmn2:callActivity id="CallActivity_6403" name="Set Delivery Block Reason">
             <bpmn2:extensionElements>
                 <ifl:property>
@@ -9128,7 +9115,19 @@ Error Details - ${property.MainMessage}</value>
             <bpmn2:incoming>SequenceFlow_6236</bpmn2:incoming>
             <bpmn2:outgoing>SequenceFlow_6240</bpmn2:outgoing>
         </bpmn2:callActivity>
-        <bpmn2:sequenceFlow id="SequenceFlow_6220" sourceRef="StartEvent_6218" targetRef="ServiceTask_6224"/>
+        <bpmn2:startEvent id="StartEvent_6218" name="Start 4">
+            <bpmn2:extensionElements>
+                <ifl:property>
+                    <key>cmdVariantUri</key>
+                    <value>ctype::FlowstepVariant/cname::StartEvent</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>activityType</key>
+                    <value>StartEvent</value>
+                </ifl:property>
+            </bpmn2:extensionElements>
+            <bpmn2:outgoing>SequenceFlow_6220</bpmn2:outgoing>
+        </bpmn2:startEvent>
         <bpmn2:sequenceFlow id="SequenceFlow_6404" sourceRef="CallActivity_6403" targetRef="EndEvent_6219"/>
         <bpmn2:sequenceFlow id="SequenceFlow_6225" sourceRef="ServiceTask_6224" targetRef="CallActivity_6233"/>
         <bpmn2:sequenceFlow id="SequenceFlow_6244" sourceRef="ServiceTask_6243" targetRef="CallActivity_6248"/>
@@ -9136,6 +9135,7 @@ Error Details - ${property.MainMessage}</value>
         <bpmn2:sequenceFlow id="SequenceFlow_6249" sourceRef="CallActivity_6248" targetRef="CallActivity_6403"/>
         <bpmn2:sequenceFlow id="SequenceFlow_6234" sourceRef="CallActivity_6233" targetRef="ServiceTask_6235"/>
         <bpmn2:sequenceFlow id="SequenceFlow_6240" sourceRef="CallActivity_6239" targetRef="ServiceTask_6243"/>
+        <bpmn2:sequenceFlow id="SequenceFlow_6220" sourceRef="StartEvent_6218" targetRef="ServiceTask_6224"/>
     </bpmn2:process>
     <bpmndi:BPMNDiagram id="BPMNDiagram_1" name="Default Collaboration Diagram">
         <bpmndi:BPMNPlane bpmnElement="Collaboration_1" id="BPMNPlane_1">
@@ -9650,6 +9650,10 @@ Error Details - ${property.MainMessage}</value>
             <bpmndi:BPMNEdge bpmnElement="SequenceFlow_15034158" id="BPMNEdge_SequenceFlow_15034158" sourceElement="BPMNShape_CallActivity_15034157" targetElement="BPMNShape_EndEvent_4">
                 <di:waypoint x="1994.0" xsi:type="dc:Point" y="10.0"/>
                 <di:waypoint x="2112.0" xsi:type="dc:Point" y="10.0"/>
+            </bpmndi:BPMNEdge>
+            <bpmndi:BPMNEdge bpmnElement="SequenceFlow_15034169" id="BPMNEdge_SequenceFlow_15034169" sourceElement="BPMNShape_CallActivity_6" targetElement="BPMNShape_CallActivity_15034157">
+                <di:waypoint x="1672.0" xsi:type="dc:Point" y="12.0"/>
+                <di:waypoint x="1988.0" xsi:type="dc:Point" y="12.0"/>
             </bpmndi:BPMNEdge>
             <bpmndi:BPMNEdge bpmnElement="SequenceFlow_6409" id="BPMNEdge_SequenceFlow_6409" sourceElement="BPMNShape_CallActivity_6408" targetElement="BPMNShape_EndEvent_6345">
                 <di:waypoint x="4519.0" xsi:type="dc:Point" y="753.0"/>
@@ -10253,10 +10257,6 @@ Error Details - ${property.MainMessage}</value>
             <bpmndi:BPMNEdge bpmnElement="MessageFlow_15034166" id="BPMNEdge_MessageFlow_15034166" sourceElement="BPMNShape_EndEvent_2" targetElement="BPMNShape_Participant_15034165">
                 <di:waypoint x="2728.0" xsi:type="dc:Point" y="415.0"/>
                 <di:waypoint x="3195.0" xsi:type="dc:Point" y="424.0"/>
-            </bpmndi:BPMNEdge>
-            <bpmndi:BPMNEdge bpmnElement="SequenceFlow_15034169" id="BPMNEdge_SequenceFlow_15034169" sourceElement="BPMNShape_CallActivity_6" targetElement="BPMNShape_CallActivity_15034157">
-                <di:waypoint x="1672.0" xsi:type="dc:Point" y="12.0"/>
-                <di:waypoint x="1988.0" xsi:type="dc:Point" y="12.0"/>
             </bpmndi:BPMNEdge>
         </bpmndi:BPMNPlane>
     </bpmndi:BPMNDiagram>

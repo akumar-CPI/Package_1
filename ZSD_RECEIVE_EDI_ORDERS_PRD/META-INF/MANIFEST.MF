@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 SAP-RuntimeProfile: iflmap
 Bundle-SymbolicName: ZSD_RECEIVE_EDI_ORDERS_PRD
 Bundle-Name: ZSD_RECEIVE_EDI_ORDERS_PRD
-Bundle-Version: 1.0.21
+Bundle-Version: 2.0.1
 Bundle-ManifestVersion: 2
 Origin-Bundle-SymbolicName: ZSD_RECEIVE_EDI_ORDERS_PRD
 SAP-NodeType: IFLMAP
