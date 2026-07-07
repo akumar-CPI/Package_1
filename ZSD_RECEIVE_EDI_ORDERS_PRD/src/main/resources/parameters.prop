@@ -1,0 +1,9 @@
+#
+#Mon Jun 02 08:48:20 UTC 2025
+<File_name>=JMINT+5600000008584+8078943260+ORDERSFF+AZP1+NULL+20250502201618931+AS2.xml
+<FTP_SERVER>=saprouter.server.com
+<FTP_CREDENTIALS>=FTP@CER_PROD
+<Host_V2>=https\://my406080-api.s4hana.cloud.sap/
+<Host_V4>=https\://my406080-api.s4hana.cloud.sap\:443/
+<FTP_FOLDER>=
+<Authenticate_V4>=CPI_TO_PRD_EDI
